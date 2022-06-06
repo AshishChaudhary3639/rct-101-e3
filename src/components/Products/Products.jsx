@@ -1,7 +1,14 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 const Products = () => {
-  return <div>{/* Code here */}</div>;
+  const [items, setItems] = useState([])
+  return <div >
+      {
+        items.map((item)=>{
+          <div key={item.id}>{item.name}</div>
+        })
+      }
+ 
+    </div>;
 };
 
 export default Products;
